@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://dem5ba718iydp"]
+
+[ext_resource type="Script" path="res://maki.gd" id="1_kihic"]
+[ext_resource type="Texture2D" uid="uid://c8e6dyrr62rdy" path="res://Art/MakiBox2.png" id="3_l3csr"]
+[ext_resource type="Texture2D" uid="uid://vbcukprgpglm" path="res://Art/MakiBox1.png" id="3_vurot"]
+[ext_resource type="Texture2D" uid="uid://bvtmb1icnn01j" path="res://Art/MakiFlashing1.png" id="4_sxtpo"]
+[ext_resource type="Texture2D" uid="uid://cndgo34vrojj" path="res://Art/MakiFlashing2.png" id="5_djl1e"]
+
+[node name="Maki" type="Area2D"]
+script = ExtResource("1_kihic")
+
+[node name="First" type="TextureButton" parent="."]
+offset_left = 4.0
+offset_top = 12.0
+offset_right = 504.0
+offset_bottom = 258.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("3_vurot")
+stretch_mode = 0
+
+[node name="Second" type="TextureButton" parent="."]
+offset_left = 4.0
+offset_top = 92.0
+offset_right = 504.0
+offset_bottom = 338.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("3_l3csr")
+
+[node name="FirstRed" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 4.0
+offset_top = 12.0
+offset_right = 504.0
+offset_bottom = 258.0
+scale = Vector2(0.2, 0.2)
+mouse_filter = 2
+texture = ExtResource("4_sxtpo")
+
+[node name="SecondRed" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 4.0
+offset_top = 92.0
+offset_right = 504.0
+offset_bottom = 338.0
+scale = Vector2(0.2, 0.2)
+mouse_filter = 2
+texture = ExtResource("5_djl1e")
+
+[connection signal="pressed" from="First" to="." method="_on_1_st_pressed"]
+[connection signal="pressed" from="Second" to="." method="_on_2_nd_pressed"]

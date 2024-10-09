@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvdfgio4etwbp"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_6st2r"]
+[ext_resource type="PackedScene" uid="uid://dem5ba718iydp" path="res://maki.tscn" id="2_whe6p"]
+[ext_resource type="PackedScene" uid="uid://dyj8e23f50yu5" path="res://counter.tscn" id="3_kpfrh"]
+[ext_resource type="Texture2D" uid="uid://u7rlual3jljj" path="res://Art/Circle.png" id="4_dropr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_14ne1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ayyr7"]
+
+[node name="Player" type="Area2D"]
+script = ExtResource("1_6st2r")
+
+[node name="Name" type="LineEdit" parent="."]
+offset_right = 108.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.988235, 0.780392, 0.227451, 1)
+theme_override_colors/font_placeholder_color = Color(0.686275, 0.670588, 0.670588, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_14ne1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ayyr7")
+placeholder_text = "Name"
+alignment = 1
+select_all_on_focus = true
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="Maki" parent="." instance=ExtResource("2_whe6p")]
+position = Vector2(0, 60)
+
+[node name="TempuraCounter" parent="." instance=ExtResource("3_kpfrh")]
+position = Vector2(0, 220)
+
+[node name="SashimiCounter" parent="." instance=ExtResource("3_kpfrh")]
+position = Vector2(0, 300)
+
+[node name="DumplingCounter" parent="." instance=ExtResource("3_kpfrh")]
+position = Vector2(0, 380)
+
+[node name="SquidCounter" parent="." instance=ExtResource("3_kpfrh")]
+position = Vector2(0, 460)
+
+[node name="SalmonCounter" parent="." instance=ExtResource("3_kpfrh")]
+position = Vector2(0, 540)
+
+[node name="EggCounter" parent="." instance=ExtResource("3_kpfrh")]
+position = Vector2(0, 620)
+
+[node name="PuddingCounter" parent="." instance=ExtResource("3_kpfrh")]
+position = Vector2(0, 780)
+
+[node name="Score" type="Label" parent="."]
+offset_left = 3.0
+offset_top = 692.0
+offset_right = 105.0
+offset_bottom = 781.0
+theme_override_colors/font_color = Color(0.988235, 0.780392, 0.227451, 1)
+theme_override_font_sizes/font_size = 50
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PuddingTotal" type="Area2D" parent="."]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="PuddingTotal"]
+offset_left = 64.0
+offset_top = 787.0
+offset_right = 302.0
+offset_bottom = 1024.0
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_dropr")
+
+[node name="Label" type="Label" parent="PuddingTotal"]
+offset_left = 67.0
+offset_top = 783.0
+offset_right = 81.0
+offset_bottom = 812.0
+theme_override_colors/font_color = Color(0.215686, 0.180392, 0.219608, 1)
+theme_override_font_sizes/font_size = 18
+text = "1"
+horizontal_alignment = 1
+
+[connection signal="text_changed" from="Name" to="." method="_on_name_text_changed"]

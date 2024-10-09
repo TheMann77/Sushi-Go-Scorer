@@ -1,0 +1,376 @@
+[gd_scene load_steps=14 format=3 uid="uid://e3wbv7dmhhap"]
+
+[ext_resource type="Script" path="res://settings.gd" id="1_2k856"]
+[ext_resource type="Texture2D" uid="uid://d2ppgspwkh273" path="res://Art/Home.png" id="1_d7unx"]
+[ext_resource type="Texture2D" uid="uid://bcvxi778cvm1k" path="res://Art/SettingsButtonOff.png" id="3_f20bf"]
+[ext_resource type="Texture2D" uid="uid://lxvasb7rgjov" path="res://Art/SettingsButtonOn.png" id="4_8wlc1"]
+[ext_resource type="Texture2D" uid="uid://6mmkyipmclx1" path="res://Art/SettingsCounter.png" id="5_6fwyf"]
+[ext_resource type="Texture2D" uid="uid://bfd8rln2lyq37" path="res://Art/SettingsButtonDisabled.png" id="5_od0sb"]
+[ext_resource type="Texture2D" uid="uid://bjqy3u7qhhwd7" path="res://Art/Hint.png" id="6_w81ry"]
+[ext_resource type="Texture2D" uid="uid://d0os1n1omqe6c" path="res://Art/DownButton.png" id="7_wf3ok"]
+[ext_resource type="Texture2D" uid="uid://c5o65ek6vew30" path="res://Art/UpButton.png" id="8_wgrwp"]
+[ext_resource type="Texture2D" uid="uid://rtv54feqxjdh" path="res://Art/ConfirmButton.png" id="9_faqrh"]
+[ext_resource type="Texture2D" uid="uid://c13pktdjbjlsj" path="res://Art/PopUp.png" id="10_oa4vh"]
+[ext_resource type="Texture2D" uid="uid://bsmsapjseqrnn" path="res://Art/PopUpButton.png" id="11_i2fow"]
+[ext_resource type="Texture2D" uid="uid://du803mfo0rh3d" path="res://Art/CloseButton.png" id="13_f3sfe"]
+
+[node name="Settings" type="Node2D"]
+script = ExtResource("1_2k856")
+
+[node name="Home" type="TextureButton" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 378.0
+offset_bottom = 379.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("1_d7unx")
+metadata/_edit_use_anchors_ = true
+
+[node name="Split" type="Area2D" parent="."]
+position = Vector2(-2, 185)
+
+[node name="SplitButton" type="TextureButton" parent="Split"]
+offset_left = 14.55
+offset_right = 1574.55
+offset_bottom = 223.0
+scale = Vector2(0.3, 0.3)
+toggle_mode = true
+button_pressed = true
+texture_normal = ExtResource("3_f20bf")
+texture_pressed = ExtResource("4_8wlc1")
+texture_disabled = ExtResource("5_od0sb")
+
+[node name="Label" type="Label" parent="Split"]
+offset_left = 15.0
+offset_right = 355.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 22
+text = "Split points on tie"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Second" type="Area2D" parent="."]
+position = Vector2(-2, 278)
+
+[node name="SecondButton" type="TextureButton" parent="Second"]
+offset_left = 14.55
+offset_right = 1574.55
+offset_bottom = 223.0
+scale = Vector2(0.3, 0.3)
+toggle_mode = true
+texture_normal = ExtResource("3_f20bf")
+texture_pressed = ExtResource("4_8wlc1")
+texture_disabled = ExtResource("5_od0sb")
+
+[node name="Label" type="Label" parent="Second"]
+offset_left = 15.0
+offset_right = 355.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 22
+text = "Allow false 2nds"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Tooltip" type="TextureButton" parent="Second"]
+offset_left = 276.0
+offset_top = 15.0
+offset_right = 518.0
+offset_bottom = 304.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("6_w81ry")
+
+[node name="Expansion" type="Area2D" parent="."]
+position = Vector2(-2, 371)
+
+[node name="ExpansionButton" type="TextureButton" parent="Expansion"]
+offset_left = 14.55
+offset_right = 1574.55
+offset_bottom = 223.0
+scale = Vector2(0.3, 0.3)
+disabled = true
+toggle_mode = true
+texture_normal = ExtResource("3_f20bf")
+texture_pressed = ExtResource("4_8wlc1")
+texture_disabled = ExtResource("5_od0sb")
+
+[node name="Label" type="Label" parent="Expansion"]
+offset_left = 15.0
+offset_right = 355.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 22
+text = "Use expansion cards"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ExpansionStats" type="Area2D" parent="."]
+position = Vector2(-2, 464)
+
+[node name="ExpansionStatsButton" type="TextureButton" parent="ExpansionStats"]
+offset_left = 15.0
+offset_right = 1575.0
+offset_bottom = 223.0
+scale = Vector2(0.3, 0.3)
+disabled = true
+toggle_mode = true
+texture_normal = ExtResource("3_f20bf")
+texture_pressed = ExtResource("4_8wlc1")
+texture_disabled = ExtResource("5_od0sb")
+
+[node name="Label" type="Label" parent="ExpansionStats"]
+offset_left = 15.0
+offset_right = 355.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 22
+text = "Show expansion card stats"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Rounds" type="Area2D" parent="."]
+position = Vector2(478, 400)
+
+[node name="TextureRect" type="TextureRect" parent="Rounds"]
+offset_left = 8.0
+offset_right = 1559.0
+offset_bottom = 214.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_6fwyf")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Rounds"]
+offset_left = 8.0
+offset_right = 360.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 22
+text = "Rounds per game
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Num" type="Label" parent="Rounds"]
+offset_left = 360.0
+offset_right = 468.0
+offset_bottom = 64.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MinusButton" type="TextureButton" parent="Rounds"]
+offset_left = 369.0
+offset_top = 17.0
+offset_right = 644.0
+offset_bottom = 290.0
+scale = Vector2(0.105, 0.105)
+texture_normal = ExtResource("7_wf3ok")
+stretch_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="PlusButton" type="TextureButton" parent="Rounds"]
+offset_left = 428.0
+offset_top = 17.0
+offset_right = 700.0
+offset_bottom = 290.0
+scale = Vector2(0.105, 0.105)
+texture_normal = ExtResource("8_wgrwp")
+metadata/_edit_use_anchors_ = true
+
+[node name="Restore" type="Area2D" parent="."]
+position = Vector2(0, 557)
+
+[node name="RestoreButton" type="TextureButton" parent="Restore"]
+offset_left = 14.55
+offset_right = 1517.55
+offset_bottom = 224.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("9_faqrh")
+
+[node name="Label" type="Label" parent="Restore"]
+offset_left = 70.0
+offset_right = 405.0
+offset_bottom = 64.0
+theme_override_colors/font_color = Color(0.631373, 0.839216, 0.803922, 1)
+theme_override_font_sizes/font_size = 22
+text = "Restore default settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Confirm" type="Area2D" parent="."]
+visible = false
+position = Vector2(0, 480)
+
+[node name="ConfirmButton" type="TextureButton" parent="Confirm"]
+offset_left = 70.0
+offset_right = 1188.0
+offset_bottom = 215.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("9_faqrh")
+
+[node name="Label" type="Label" parent="Confirm"]
+offset_left = 70.0
+offset_right = 405.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 22
+text = "Confirm"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Reset" type="Area2D" parent="."]
+
+[node name="ResetButton" type="TextureButton" parent="Reset"]
+offset_left = 14.55
+offset_top = 816.0
+offset_right = 1524.55
+offset_bottom = 1040.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("9_faqrh")
+
+[node name="Label" type="Label" parent="Reset"]
+offset_left = 70.0
+offset_top = 816.0
+offset_right = 405.0
+offset_bottom = 880.0
+theme_override_colors/font_color = Color(0.631373, 0.839216, 0.803922, 1)
+theme_override_font_sizes/font_size = 22
+text = "Reset all stats"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Popup" type="Area2D" parent="."]
+visible = false
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Popup"]
+offset_left = 45.0
+offset_top = 311.0
+offset_right = 695.0
+offset_bottom = 744.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("10_oa4vh")
+region_rect = Rect2(0, 0, 1324, 1089)
+patch_margin_left = 67
+patch_margin_top = 88
+patch_margin_right = 85
+patch_margin_bottom = 101
+
+[node name="InfoLabel" type="Label" parent="Popup"]
+offset_left = 60.0
+offset_top = 311.0
+offset_right = 420.0
+offset_bottom = 485.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Are you sure you want to reset all stats? Lost data cannot be recovered"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="CancelLabel" type="Label" parent="Popup"]
+offset_left = 58.0
+offset_top = 485.0
+offset_right = 224.0
+offset_bottom = 552.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Cancel"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ConfirmLabel" type="Label" parent="Popup"]
+offset_left = 256.0
+offset_top = 485.0
+offset_right = 422.0
+offset_bottom = 552.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Confirm"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="CancelButton" type="TextureButton" parent="Popup"]
+offset_left = 58.0
+offset_top = 485.0
+offset_right = 889.0
+offset_bottom = 820.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("11_i2fow")
+stretch_mode = 0
+
+[node name="ConfirmButton" type="TextureButton" parent="Popup"]
+offset_left = 255.8
+offset_top = 485.0
+offset_right = 1086.8
+offset_bottom = 820.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("11_i2fow")
+stretch_mode = 0
+
+[node name="TooltipPopup" type="Area2D" parent="."]
+visible = false
+
+[node name="NinePatchRect" type="NinePatchRect" parent="TooltipPopup"]
+offset_left = 45.0
+offset_top = 336.0
+offset_right = 695.0
+offset_bottom = 727.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("10_oa4vh")
+region_rect = Rect2(0, 0, 1324, 1089)
+patch_margin_left = 67
+patch_margin_top = 88
+patch_margin_right = 85
+patch_margin_bottom = 101
+
+[node name="InfoLabel" type="Label" parent="TooltipPopup"]
+offset_left = 65.0
+offset_top = 336.0
+offset_right = 415.0
+offset_bottom = 490.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "When multiple players tie for the most maki, let the player with the next most get points for 2nd place"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="CloseLabel" type="Label" parent="TooltipPopup"]
+offset_left = 58.0
+offset_top = 485.0
+offset_right = 419.0
+offset_bottom = 552.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "Close"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="CloseButton" type="TextureButton" parent="TooltipPopup"]
+offset_left = 58.0
+offset_top = 485.0
+offset_right = 1865.0
+offset_bottom = 820.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("13_f3sfe")
+stretch_mode = 0
+
+[connection signal="toggled" from="Split/SplitButton" to="." method="_on_split_button_toggled"]
+[connection signal="toggled" from="Second/SecondButton" to="." method="_on_second_button_toggled"]
+[connection signal="pressed" from="Second/Tooltip" to="." method="_on_tooltip_pressed"]
+[connection signal="toggled" from="Expansion/ExpansionButton" to="." method="_on_expansion_button_toggled"]
+[connection signal="toggled" from="ExpansionStats/ExpansionStatsButton" to="." method="_on_expansion_stats_button_toggled"]
+[connection signal="pressed" from="Rounds/MinusButton" to="." method="_on_minus_button_pressed"]
+[connection signal="pressed" from="Rounds/PlusButton" to="." method="_on_plus_button_pressed"]
+[connection signal="pressed" from="Restore/RestoreButton" to="." method="_on_restore_button_pressed"]
+[connection signal="pressed" from="Confirm/ConfirmButton" to="." method="_on_confirm_button_pressed"]
+[connection signal="pressed" from="Reset/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Popup/CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="Popup/ConfirmButton" to="." method="_on_confirm_reset_button_pressed"]
+[connection signal="pressed" from="TooltipPopup/CloseButton" to="." method="_on_close_button_pressed"]

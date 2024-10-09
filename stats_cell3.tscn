@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm8c8dy82qo5s"]
+
+[ext_resource type="Texture2D" uid="uid://de7fda7vf2hql" path="res://Art/WhiteStatsRect.png" id="1_an2sm"]
+
+[node name="StatsCell3" type="Node2D"]
+
+[node name="Rect" type="NinePatchRect" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 936.0
+offset_bottom = 64.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_an2sm")
+region_rect = Rect2(0, 0, 561, 357)
+patch_margin_left = 46
+patch_margin_top = 27
+patch_margin_right = 44
+patch_margin_bottom = 27
+
+[node name="Field" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 6.0
+offset_right = 162.0
+offset_bottom = 36.0
+theme_override_font_sizes/font_size = 15
+text = "2nd place:"
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 162.0
+offset_top = 8.0
+offset_right = 163.0
+offset_bottom = 36.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 316.0
+offset_top = 8.0
+offset_right = 317.0
+offset_bottom = 36.0
+
+[node name="Val1" type="Label" parent="."]
+offset_left = 169.0
+offset_top = 6.0
+offset_right = 312.0
+offset_bottom = 36.0
+theme_override_font_sizes/font_size = 15
+text = "Alex - 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="Val2" type="Label" parent="."]
+offset_left = 324.0
+offset_top = 6.0
+offset_right = 466.0
+offset_bottom = 36.0
+theme_override_font_sizes/font_size = 15
+text = "Alex - 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 1

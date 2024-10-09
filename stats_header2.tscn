@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bjodrchdljftb"]
+
+[node name="StatsHeader2" type="Node2D"]
+
+[node name="Field" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 230.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 15
+text = "Consecutive winless games:"
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="Val" type="Label" parent="."]
+offset_left = 248.0
+offset_top = 8.0
+offset_right = 466.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 15
+text = "Alex - 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 1
